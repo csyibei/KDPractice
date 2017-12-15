@@ -9,8 +9,6 @@
 #import "UIViewController+Tracking.h"
 #import <objc/runtime.h>
 @implementation UIViewController (Tracking)
-
-
 + (void)load
 {
     static dispatch_once_t onceToken;
@@ -27,7 +25,6 @@
         }
     });
 }
-
 
 - (void)kd_viewDidAppear:(BOOL)animated
 {

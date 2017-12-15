@@ -8,16 +8,17 @@
 
 #import "KDTableViewController.h"
 #import "ViewController.h"
+#import "ExplicitAnimationViewController.h"
 
 @interface KDTableViewController ()
-
+@property (nonatomic,strong) NSArray *dataArr;
 @end
 
 @implementation KDTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.dataArr = @[@"method Swizzing",@"CABaseAnimation"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -39,17 +40,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 1;
+    return self.dataArr.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"method swizzing";
-    }
-    
-    
+    cell.textLabel.text = self.dataArr[indexPath.row];
     return cell;
 }
 
@@ -58,6 +55,9 @@
     if (indexPath.row == 0) {
         ViewController *ctl = [[ViewController alloc] init];
         [self.navigationController  pushViewController:ctl animated:YES];
+    }else if(indexPath.row == 1){
+        ExplicitAnimationViewController *ctl = [[ExplicitAnimationViewController alloc] init];
+        [self.navigationController pushViewController:ctl animated:YES];
     }
 }
 
