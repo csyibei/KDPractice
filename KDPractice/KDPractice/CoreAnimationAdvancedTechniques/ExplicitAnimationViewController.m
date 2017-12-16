@@ -32,7 +32,7 @@
     CGFloat randomBlue = arc4random() / (CGFloat)INT_MAX;
     ani.keyPath = @"backgroudColor";
     ani.toValue = (__bridge id)[UIColor colorWithRed:randomRed green:randomGreen blue:randomBlue alpha:1.0].CGColor;
-    ani.delegate = self;
+//    ani.delegate = self;
     [self.aLayer addAnimation:ani forKey:nil];
 }
 
@@ -40,8 +40,9 @@
 - (void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag
 {
     [CATransaction begin];
-    [CATransaction setDisableActions:YES];
-    self.aLayer.backgroundColor = (__bridge CGColorRef)anim.toValue;
+//    [CATransaction setDisableActions:YES];
+//    [CATransaction setAnimationDuration:5.0f];
+//    self.aLayer.backgroundColor = (__bridge CGColorRef)anim.toValue;
     [CATransaction commit];
 }
 
@@ -50,14 +51,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

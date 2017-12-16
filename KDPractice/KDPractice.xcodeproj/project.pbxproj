@@ -20,6 +20,8 @@
 		2B52860A1E8CF1E500FD0F7D /* UIViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5286091E8CF1E500FD0F7D /* UIViewController+Tracking.m */; };
 		2BF9EEFE1FE2E78300BC1706 /* ExplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9EEFC1FE2E78300BC1706 /* ExplicitAnimationViewController.m */; };
 		2BF9EEFF1FE2E78300BC1706 /* ExplicitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9EEFD1FE2E78300BC1706 /* ExplicitAnimationViewController.xib */; };
+		2BF9EF031FE5C5A400BC1706 /* ImplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9EF011FE5C5A400BC1706 /* ImplicitAnimationViewController.m */; };
+		2BF9EF041FE5C5A400BC1706 /* ImplicitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9EF021FE5C5A400BC1706 /* ImplicitAnimationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		2BF9EEFB1FE2E78300BC1706 /* ExplicitAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplicitAnimationViewController.h; sourceTree = "<group>"; };
 		2BF9EEFC1FE2E78300BC1706 /* ExplicitAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExplicitAnimationViewController.m; sourceTree = "<group>"; };
 		2BF9EEFD1FE2E78300BC1706 /* ExplicitAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExplicitAnimationViewController.xib; sourceTree = "<group>"; };
+		2BF9EF001FE5C5A400BC1706 /* ImplicitAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationViewController.h; sourceTree = "<group>"; };
+		2BF9EF011FE5C5A400BC1706 /* ImplicitAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationViewController.m; sourceTree = "<group>"; };
+		2BF9EF021FE5C5A400BC1706 /* ImplicitAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImplicitAnimationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +210,9 @@
 				2BF9EEFB1FE2E78300BC1706 /* ExplicitAnimationViewController.h */,
 				2BF9EEFC1FE2E78300BC1706 /* ExplicitAnimationViewController.m */,
 				2BF9EEFD1FE2E78300BC1706 /* ExplicitAnimationViewController.xib */,
+				2BF9EF001FE5C5A400BC1706 /* ImplicitAnimationViewController.h */,
+				2BF9EF011FE5C5A400BC1706 /* ImplicitAnimationViewController.m */,
+				2BF9EF021FE5C5A400BC1706 /* ImplicitAnimationViewController.xib */,
 			);
 			path = CoreAnimationAdvancedTechniques;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 			files = (
 				2B5285E11E8CEC2000FD0F7D /* LaunchScreen.storyboard in Resources */,
 				2BF9EEFF1FE2E78300BC1706 /* ExplicitAnimationViewController.xib in Resources */,
+				2BF9EF041FE5C5A400BC1706 /* ImplicitAnimationViewController.xib in Resources */,
 				2B5285DE1E8CEC2000FD0F7D /* Assets.xcassets in Resources */,
 				2B5285D91E8CEC2000FD0F7D /* Main.storyboard in Resources */,
 			);
@@ -345,6 +354,7 @@
 			files = (
 				2B5286061E8CED3B00FD0F7D /* KDTableViewController.m in Sources */,
 				2B5285D61E8CEC2000FD0F7D /* ViewController.m in Sources */,
+				2BF9EF031FE5C5A400BC1706 /* ImplicitAnimationViewController.m in Sources */,
 				2B5285DC1E8CEC2000FD0F7D /* KDPractice.xcdatamodeld in Sources */,
 				2B5285D31E8CEC2000FD0F7D /* AppDelegate.m in Sources */,
 				2BF9EEFE1FE2E78300BC1706 /* ExplicitAnimationViewController.m in Sources */,
