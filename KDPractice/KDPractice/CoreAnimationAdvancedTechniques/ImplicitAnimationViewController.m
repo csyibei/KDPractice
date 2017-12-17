@@ -11,6 +11,7 @@
 @interface ImplicitAnimationViewController ()
 @property (weak, nonatomic) IBOutlet UIView *aView;
 @property (nonatomic,strong) CALayer *colorLayer;
+@property (nonatomic,strong) CALayer *hitTestLayer;
 @end
 
 @implementation ImplicitAnimationViewController
@@ -33,11 +34,23 @@
     self.colorLayer.actions = @{@"backgroundColor" : transition};
     [self.aView.layer addSublayer:self.colorLayer];
 //    self.colorLayer.delegate = self;
+    self.hitTestLayer = [CALayer layer];
+    self.hitTestLayer.frame = CGRectMake(0, 0, 50, 50);
+    self.hitTestLayer.backgroundColor = [UIColor orangeColor].CGColor;
+    [self.view.layer addSublayer:self.hitTestLayer];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    CGPoint point = [[touches anyObject] locationInView:self.view];
+    if ([self.hitTestLayer.presentationLayer hitTest:point]) {
+        self.hitTestLayer.backgroundColor = [UIColor colorWithRed:arc4random() / INT_MAX green:arc4random() / INT_MAX blue:arc4random() / INT_MAX alpha:1.0f].CGColor;
+    }else{
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:4.0f];
+        self.hitTestLayer.position = point;
+        [CATransaction commit];
+    }
 }
 
 - (IBAction)changeColorClick:(id)sender {
