@@ -30,9 +30,14 @@
     CGFloat randomRed = arc4random() / (CGFloat)INT_MAX;
     CGFloat randomGreen = arc4random() / (CGFloat)INT_MAX;
     CGFloat randomBlue = arc4random() / (CGFloat)INT_MAX;
-    ani.keyPath = @"backgroudColor";
+    ani.keyPath = @"backgroundColor";
+//    ani.fillMode = @"forwards";
+//    ani.removedOnCompletion = NO;
+//    ani.keyPath = @"transform.rotation";
     ani.toValue = (__bridge id)[UIColor colorWithRed:randomRed green:randomGreen blue:randomBlue alpha:1.0].CGColor;
-//    ani.delegate = self;
+//    ani.byValue = @(M_PI_4);
+    ani.delegate = self;
+//    self.aLayer.backgroundColor = [UIColor colorWithRed:randomRed green:randomGreen blue:randomBlue alpha:1.0].CGColor;
     [self.aLayer addAnimation:ani forKey:nil];
 }
 
@@ -40,9 +45,10 @@
 - (void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag
 {
     [CATransaction begin];
-//    [CATransaction setDisableActions:YES];
-//    [CATransaction setAnimationDuration:5.0f];
-//    self.aLayer.backgroundColor = (__bridge CGColorRef)anim.toValue;
+    [CATransaction setDisableActions:YES];
+    [CATransaction setAnimationDuration:5.0f];
+    self.aLayer.backgroundColor = (__bridge CGColorRef)anim.toValue;
+//    self.aLayer.backgroundColor = [UIColor redColor].CGColor;
     [CATransaction commit];
 }
 
