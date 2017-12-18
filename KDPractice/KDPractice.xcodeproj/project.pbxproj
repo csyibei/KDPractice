@@ -120,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				2BF9EEFA1FE2E65500BC1706 /* CoreAnimationAdvancedTechniques */,
-				2BD3957B1E8FA0E3003A02DE /* LightweightController */,
 				2B5286071E8CF02800FD0F7D /* MethodSwizzing */,
 				2B5285D11E8CEC2000FD0F7D /* AppDelegate.h */,
 				2B5285D21E8CEC2000FD0F7D /* AppDelegate.m */,
@@ -171,37 +170,6 @@
 				2B5286091E8CF1E500FD0F7D /* UIViewController+Tracking.m */,
 			);
 			path = MethodSwizzing;
-			sourceTree = "<group>";
-		};
-		2BD3957B1E8FA0E3003A02DE /* LightweightController */ = {
-			isa = PBXGroup;
-			children = (
-				2BD3957C1E8FA0E3003A02DE /* Controller */,
-				2BD3957D1E8FA0E3003A02DE /* Model */,
-				2BD3957E1E8FA0E3003A02DE /* View */,
-			);
-			path = LightweightController;
-			sourceTree = "<group>";
-		};
-		2BD3957C1E8FA0E3003A02DE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		2BD3957D1E8FA0E3003A02DE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2BD3957E1E8FA0E3003A02DE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		2BF9EEFA1FE2E65500BC1706 /* CoreAnimationAdvancedTechniques */ = {
