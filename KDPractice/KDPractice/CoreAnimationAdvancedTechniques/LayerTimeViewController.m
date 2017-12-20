@@ -9,7 +9,7 @@
 #import "LayerTimeViewController.h"
 
 @interface LayerTimeViewController ()
-
+@property (nonatomic,strong) CALayer *timeLayer;
 @end
 
 @implementation LayerTimeViewController
@@ -17,19 +17,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CALayer *timeLayer = [CALayer layer];
-    timeLayer.frame = CGRectMake(100, 100, 50, 50);
-    timeLayer.backgroundColor = [UIColor orangeColor].CGColor;
-    [self.view.layer addSublayer:timeLayer];
+    _timeLayer = [CALayer layer];
+    _timeLayer.frame = CGRectMake(100, 100, 50, 50);
+    _timeLayer.backgroundColor = [UIColor orangeColor].CGColor;
+    [self.view.layer addSublayer:_timeLayer];
     
+   
+}
+
+- (IBAction)beginAnimationClick:(id)sender {
+    [self beginTimeAnimation];
+}
+
+- (void)beginTimeAnimation
+{
     CABasicAnimation *timeAnimation = [CABasicAnimation animation];
     timeAnimation.keyPath = @"transform.rotation";
     timeAnimation.toValue = @(M_PI_4);
-    timeAnimation.duration = 2.f;
-    timeAnimation.repeatCount = 3.f;
-    timeAnimation.fillMode = @"forwards";
+    //    timeAnimation.speed = 2.f;
+    timeAnimation.duration = 1.f;
+    //    timeAnimation.timeOffset = 2.f;
+    timeAnimation.beginTime = 2.f;
+    //    timeAnimation.repeatCount = 3.f;
+    //    timeAnimation.repeatDuration = 4.f;
+    timeAnimation.fillMode = @"both";
     timeAnimation.removedOnCompletion = NO;
-    [timeLayer addAnimation:timeAnimation forKey:nil];
+    [_timeLayer addAnimation:timeAnimation forKey:nil];
 }
 
 - (void)didReceiveMemoryWarning {
