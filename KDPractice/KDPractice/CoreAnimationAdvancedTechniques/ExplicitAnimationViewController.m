@@ -56,9 +56,10 @@
 - (void)beginTransformAnimation
 {
     CABasicAnimation *transformAnimation = [CABasicAnimation animation];
-    transformAnimation.keyPath = @"transform";
+    transformAnimation.keyPath = @"transform.rotation";
     transformAnimation.duration = 1.0f;
-    transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI * 2, 0, 0, 1)];
+    transformAnimation.toValue = @(M_PI);
+//    transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
 //    [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
 //    [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
 //    [NSValue valueWithCGAffineTransform:CGAffineTransformMakeRotation(M_PI_4)];
@@ -76,16 +77,16 @@
     shape.strokeColor = [UIColor orangeColor].CGColor;
     shape.fillColor = [UIColor clearColor].CGColor;
     [self.view.layer addSublayer:shape];
-//    _kaiDiLayer = [CALayer layer];
-//    _kaiDiLayer.frame = CGRectMake(0, 0, 44, 44);
-//    _kaiDiLayer.contents = (__bridge id)[UIImage imageNamed:@"WechatIMG6131"].CGImage;
-//    _kaiDiLayer.position = CGPointMake(50, 100);
-//    [self.view.layer addSublayer:_kaiDiLayer];
-    _colorLayer = [CALayer layer];
-    _colorLayer.frame = CGRectMake(0, 0, 40, 40);
-    _colorLayer.position = CGPointMake(50, 100);
-    _colorLayer.backgroundColor = [UIColor redColor].CGColor;
-    [self.view.layer addSublayer:_colorLayer];
+    _kaiDiLayer = [CALayer layer];
+    _kaiDiLayer.frame = CGRectMake(0, 0, 44, 44);
+    _kaiDiLayer.contents = (__bridge id)[UIImage imageNamed:@"WechatIMG6131"].CGImage;
+    _kaiDiLayer.position = CGPointMake(50, 100);
+    [self.view.layer addSublayer:_kaiDiLayer];
+//    _colorLayer = [CALayer layer];
+//    _colorLayer.frame = CGRectMake(0, 0, 40, 40);
+//    _colorLayer.position = CGPointMake(50, 100);
+//    _colorLayer.backgroundColor = [UIColor redColor].CGColor;
+//    [self.view.layer addSublayer:_colorLayer];
 }
 
 - (void)beginAnimation
@@ -101,8 +102,8 @@
 
 - (IBAction)changeColorClick:(id)sender {
 //     [self beginAnimation];
-//    [self beginTransformAnimation];
-    [self groudAnimation];
+    [self beginTransformAnimation];
+//    [self groudAnimation];
 //    CABasicAnimation *ani = [CABasicAnimation animation];
 //    CGFloat randomRed = arc4random() / (CGFloat)INT_MAX;
 //    CGFloat randomGreen = arc4random() / (CGFloat)INT_MAX;
