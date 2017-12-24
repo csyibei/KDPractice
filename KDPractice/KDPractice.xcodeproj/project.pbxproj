@@ -26,6 +26,8 @@
 		2BF9EF091FEAB39100BC1706 /* LayerTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9EF071FEAB39100BC1706 /* LayerTimeViewController.xib */; };
 		2BF9EF0D1FEEC15D00BC1706 /* EasingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9EF0B1FEEC15D00BC1706 /* EasingViewController.m */; };
 		2BF9EF0E1FEEC15D00BC1706 /* EasingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9EF0C1FEEC15D00BC1706 /* EasingViewController.xib */; };
+		2BF9EF121FF011FA00BC1706 /* TimerBaseAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9EF101FF011FA00BC1706 /* TimerBaseAnimationViewController.m */; };
+		2BF9EF131FF011FA00BC1706 /* TimerBaseAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9EF111FF011FA00BC1706 /* TimerBaseAnimationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,9 @@
 		2BF9EF0A1FEEC15D00BC1706 /* EasingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasingViewController.h; sourceTree = "<group>"; };
 		2BF9EF0B1FEEC15D00BC1706 /* EasingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasingViewController.m; sourceTree = "<group>"; };
 		2BF9EF0C1FEEC15D00BC1706 /* EasingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EasingViewController.xib; sourceTree = "<group>"; };
+		2BF9EF0F1FF011FA00BC1706 /* TimerBaseAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerBaseAnimationViewController.h; sourceTree = "<group>"; };
+		2BF9EF101FF011FA00BC1706 /* TimerBaseAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerBaseAnimationViewController.m; sourceTree = "<group>"; };
+		2BF9EF111FF011FA00BC1706 /* TimerBaseAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerBaseAnimationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +202,9 @@
 				2BF9EF0A1FEEC15D00BC1706 /* EasingViewController.h */,
 				2BF9EF0B1FEEC15D00BC1706 /* EasingViewController.m */,
 				2BF9EF0C1FEEC15D00BC1706 /* EasingViewController.xib */,
+				2BF9EF0F1FF011FA00BC1706 /* TimerBaseAnimationViewController.h */,
+				2BF9EF101FF011FA00BC1706 /* TimerBaseAnimationViewController.m */,
+				2BF9EF111FF011FA00BC1706 /* TimerBaseAnimationViewController.xib */,
 			);
 			path = CoreAnimationAdvancedTechniques;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF9EF131FF011FA00BC1706 /* TimerBaseAnimationViewController.xib in Resources */,
 				2B5285E11E8CEC2000FD0F7D /* LaunchScreen.storyboard in Resources */,
 				2BF9EF091FEAB39100BC1706 /* LayerTimeViewController.xib in Resources */,
 				2BF9EEFF1FE2E78300BC1706 /* ExplicitAnimationViewController.xib in Resources */,
@@ -341,6 +350,7 @@
 			files = (
 				2B5286061E8CED3B00FD0F7D /* KDTableViewController.m in Sources */,
 				2BF9EF0D1FEEC15D00BC1706 /* EasingViewController.m in Sources */,
+				2BF9EF121FF011FA00BC1706 /* TimerBaseAnimationViewController.m in Sources */,
 				2B5285D61E8CEC2000FD0F7D /* ViewController.m in Sources */,
 				2BF9EF031FE5C5A400BC1706 /* ImplicitAnimationViewController.m in Sources */,
 				2B5285DC1E8CEC2000FD0F7D /* KDPractice.xcdatamodeld in Sources */,
