@@ -11,6 +11,7 @@
 @interface EasingViewController ()
 @property (nonatomic,strong) CALayer *moveLayer;
 @property (nonatomic,strong) UIView *moveView;
+@property (nonatomic,strong) CALayer *easingLayer;
 @end
 
 @implementation EasingViewController
@@ -26,6 +27,32 @@
     self.moveView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.moveView];
     
+    [self drawEasing];
+}
+
+- (void)drawEasing
+{
+    self.easingLayer = [CALayer layer];
+    self.easingLayer.frame = CGRectMake(200,200,200,200);
+    [self.view.layer addSublayer:self.easingLayer];
+    
+    CAMediaTimingFunction *fun = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    CGPoint control1;
+    CGPoint control2;
+    [fun getControlPointAtIndex:1 values:(float *)&control1];
+    [fun getControlPointAtIndex:2 values:(float *)&control2];
+    UIBezierPath *path = [[UIBezierPath alloc] init];
+    [path moveToPoint:CGPointZero];
+    [path addCurveToPoint:CGPointMake(1, 1) controlPoint1:control1 controlPoint2:control2];
+    [path applyTransform:CGAffineTransformMakeScale(20, 20)];
+    
+    CAShapeLayer *shapeL = [CAShapeLayer layer];
+    shapeL.path = path.CGPath;
+    shapeL.fillColor = [UIColor clearColor].CGColor;
+    shapeL.strokeColor = [UIColor orangeColor].CGColor;
+    shapeL.lineWidth = 4.f;
+    [self.easingLayer addSublayer:shapeL];
+//    self.view.layer.geometryFlipped = YES;
 }
 
 - (void)keyframeColor
