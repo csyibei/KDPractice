@@ -12,6 +12,7 @@
 @property (nonatomic,strong) CALayer *moveLayer;
 @property (nonatomic,strong) UIView *moveView;
 @property (nonatomic,strong) CALayer *easingLayer;
+@property (nonatomic,strong) CALayer *ballLayer;
 @end
 
 @implementation EasingViewController
@@ -27,7 +28,44 @@
     self.moveView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.moveView];
     
+    _ballLayer = [CALayer layer];
+    _ballLayer.frame = CGRectMake(0, 0, 50, 50);
+    _ballLayer.position = CGPointMake(150, 82);
+    _ballLayer.cornerRadius = 25.f;
+    _ballLayer.backgroundColor = [UIColor orangeColor].CGColor;
+    [self.view.layer addSublayer:_ballLayer];
+    
     [self drawEasing];
+    
+}
+
+- (void)ballAnimation
+{
+    CGFloat a = 50;
+    CAKeyframeAnimation *keyFrame = [CAKeyframeAnimation animation];
+    keyFrame.keyPath = @"position";
+    keyFrame.duration = 1.f;
+    keyFrame.values = @[
+                         [NSValue valueWithCGPoint:CGPointMake(150, 32  + a)],
+                         [NSValue valueWithCGPoint:CGPointMake(150, 268 + a)],
+                         [NSValue valueWithCGPoint:CGPointMake(150, 140 + a)],
+                         [NSValue valueWithCGPoint:CGPointMake(150, 268 + a)],
+                         [NSValue valueWithCGPoint:CGPointMake(150, 220 + a)],
+                         [NSValue valueWithCGPoint:CGPointMake(150, 268 + a)],
+                         [NSValue valueWithCGPoint:CGPointMake(150, 250 + a)],
+                         [NSValue valueWithCGPoint:CGPointMake(150, 268 + a)]
+                         ];
+    keyFrame.timingFunctions = @[
+                                  [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseIn],
+                                  [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseOut],
+                                  [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseIn],
+                                  [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseOut],
+                                  [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseIn],
+                                  [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseOut],
+                                  [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseIn]
+                                  ];
+    keyFrame.keyTimes = @[@0.0, @0.3, @0.5, @0.7, @0.8, @0.9, @0.95, @1.0];
+    [_ballLayer addAnimation:keyFrame forKey:nil];
 }
 
 - (void)drawEasing
@@ -93,6 +131,7 @@
 //    [self layerMoveWithTouches:touches];
 //    [self viewMoveWithTouches:touches];
     [self keyframeColor];
+    [self ballAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
