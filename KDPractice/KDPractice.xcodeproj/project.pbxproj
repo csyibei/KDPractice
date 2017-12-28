@@ -252,6 +252,7 @@
 				TargetAttributes = {
 					2B5285CA1E8CEC2000FD0F7D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RU2G4LWP4K;
 						ProvisioningStyle = Automatic;
 					};
 					2B5285E61E8CEC2000FD0F7D = {
@@ -474,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RU2G4LWP4K;
 				INFOPLIST_FILE = KDPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.KDPractice";
@@ -485,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RU2G4LWP4K;
 				INFOPLIST_FILE = KDPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.KDPractice";

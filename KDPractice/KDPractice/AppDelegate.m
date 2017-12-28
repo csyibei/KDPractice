@@ -18,14 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UITabBarController *tabBar = [[UITabBarController alloc] init];
-    tabBar.delegate = self;
-    ImplicitAnimationViewController *ctl1 = [[ImplicitAnimationViewController alloc] init];
-    ExplicitAnimationViewController *clt2 = [[ExplicitAnimationViewController alloc] init];
-    tabBar.viewControllers = @[ctl1,clt2];
-    self.window.rootViewController = tabBar;
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    UITabBarController *tabBar = [[UITabBarController alloc] init];
+//    tabBar.delegate = self;
+//    ImplicitAnimationViewController *ctl1 = [[ImplicitAnimationViewController alloc] init];
+//    ExplicitAnimationViewController *clt2 = [[ExplicitAnimationViewController alloc] init];
+//    tabBar.viewControllers = @[ctl1,clt2];
+//    self.window.rootViewController = tabBar;
+//    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
