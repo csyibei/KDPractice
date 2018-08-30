@@ -22,13 +22,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self animationPath];
+//    [self animationPath];
     // Do any additional setup after loading the view from its nib.
-    self.aLayer = [CALayer layer];
-    self.aLayer.frame = CGRectMake(0, 0, 100, 100);
-    self.aLayer.backgroundColor = [UIColor orangeColor].CGColor;
-    [self.aView.layer addSublayer:self.aLayer];
-    
+//    self.aLayer = [CALayer layer];
+//    self.aLayer.frame = CGRectMake(0, 0, 100, 100);
+//    self.aLayer.backgroundColor = [UIColor orangeColor].CGColor;
+//    [self.aView.layer addSublayer:self.aLayer];
+    self.colorLayer = [CALayer layer];
+    self.colorLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
+    self.colorLayer.backgroundColor = [UIColor blueColor].CGColor;
+    //add it to our view
+    [self.aView.layer addSublayer:self.colorLayer];
 }
 
 - (void)groudAnimation
@@ -101,8 +105,19 @@
 }
 
 - (IBAction)changeColorClick:(id)sender {
+    CGFloat red = arc4random() / (CGFloat)INT_MAX;
+    CGFloat green = arc4random() / (CGFloat)INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    //create a basic animation
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"backgroundColor";
+    animation.toValue = (__bridge id)color.CGColor;
+    animation.delegate = self;
+    //apply animation to layer
+    [self.colorLayer addAnimation:animation forKey:nil];
 //     [self beginAnimation];
-    [self beginTransformAnimation];
+//    [self beginTransformAnimation];
 //    [self groudAnimation];
 //    CABasicAnimation *ani = [CABasicAnimation animation];
 //    CGFloat randomRed = arc4random() / (CGFloat)INT_MAX;
@@ -125,7 +140,7 @@
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
 //    [CATransaction setAnimationDuration:10.0f];
-//    self.aLayer.backgroundColor = (__bridge CGColorRef)anim.toValue;
+    self.aLayer.backgroundColor = (__bridge CGColorRef)anim.toValue;
 //    self.aLayer.backgroundColor = [UIColor redColor].CGColor;
     [CATransaction commit];
 }
