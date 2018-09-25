@@ -29,7 +29,7 @@
 - (void)kd_viewDidAppear:(BOOL)animated
 {
     [self kd_viewDidAppear:animated];
-    NSLog(@"++++");
+//    NSLog(@"++++");
 }
 
 @end

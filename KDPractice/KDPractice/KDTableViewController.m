@@ -23,17 +23,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"--------------------------begin");
-    dispatch_queue_t queueA = dispatch_queue_create("com.kaidi.aaa", 0);
-    dispatch_queue_t queueB = dispatch_queue_create("com.kaidi.bbb", 0);
-    dispatch_sync(queueA, ^{
-        dispatch_sync(queueB, ^{
-            dispatch_async(queueA, ^{
-                NSLog(@"kidi1111");
-            });
-        });
-    });
-    NSLog(@"--------------------------end");
+//    NSLog(@"--------------------------begin");
+//    dispatch_queue_t queueA = dispatch_queue_create("com.kaidi.aaa", 0);
+//    dispatch_queue_t queueB = dispatch_queue_create("com.kaidi.bbb", 0);
+//    dispatch_sync(queueA, ^{
+//        dispatch_sync(queueB, ^{
+//            dispatch_async(queueA, ^{
+//                NSLog(@"kidi1111");
+//            });
+//        });
+//    });
+//    NSLog(@"--------------------------end");
     
     
     self.dataArr = @[@"method Swizzing",@"CABaseAnimation",@"ImplicitAnimation",@"LayerTime",@"Easing",@"RegularExpression"];
