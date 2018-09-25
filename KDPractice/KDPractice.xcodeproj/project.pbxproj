@@ -18,6 +18,7 @@
 		2B5285F71E8CEC2000FD0F7D /* KDPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5285F61E8CEC2000FD0F7D /* KDPracticeUITests.m */; };
 		2B5286061E8CED3B00FD0F7D /* KDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5286051E8CED3B00FD0F7D /* KDTableViewController.m */; };
 		2B52860A1E8CF1E500FD0F7D /* UIViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5286091E8CF1E500FD0F7D /* UIViewController+Tracking.m */; };
+		2B787EED2159689C0016AF33 /* KDRegularExpressionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B787EEC2159689C0016AF33 /* KDRegularExpressionViewController.m */; };
 		2BF9EEFE1FE2E78300BC1706 /* ExplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9EEFC1FE2E78300BC1706 /* ExplicitAnimationViewController.m */; };
 		2BF9EEFF1FE2E78300BC1706 /* ExplicitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF9EEFD1FE2E78300BC1706 /* ExplicitAnimationViewController.xib */; };
 		2BF9EF031FE5C5A400BC1706 /* ImplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF9EF011FE5C5A400BC1706 /* ImplicitAnimationViewController.m */; };
@@ -69,6 +70,8 @@
 		2B5286051E8CED3B00FD0F7D /* KDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDTableViewController.m; sourceTree = "<group>"; };
 		2B5286081E8CF1E500FD0F7D /* UIViewController+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracking.h"; sourceTree = "<group>"; };
 		2B5286091E8CF1E500FD0F7D /* UIViewController+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracking.m"; sourceTree = "<group>"; };
+		2B787EEB2159689C0016AF33 /* KDRegularExpressionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KDRegularExpressionViewController.h; sourceTree = "<group>"; };
+		2B787EEC2159689C0016AF33 /* KDRegularExpressionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KDRegularExpressionViewController.m; sourceTree = "<group>"; };
 		2BF9EEFB1FE2E78300BC1706 /* ExplicitAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplicitAnimationViewController.h; sourceTree = "<group>"; };
 		2BF9EEFC1FE2E78300BC1706 /* ExplicitAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExplicitAnimationViewController.m; sourceTree = "<group>"; };
 		2BF9EEFD1FE2E78300BC1706 /* ExplicitAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExplicitAnimationViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 		2B5285CD1E8CEC2000FD0F7D /* KDPractice */ = {
 			isa = PBXGroup;
 			children = (
+				2B787EEA215967C60016AF33 /* RegularExpression */,
 				2BF9EEFA1FE2E65500BC1706 /* CoreAnimationAdvancedTechniques */,
 				2B5286071E8CF02800FD0F7D /* MethodSwizzing */,
 				2B5285D11E8CEC2000FD0F7D /* AppDelegate.h */,
@@ -185,6 +189,15 @@
 				2B5286091E8CF1E500FD0F7D /* UIViewController+Tracking.m */,
 			);
 			path = MethodSwizzing;
+			sourceTree = "<group>";
+		};
+		2B787EEA215967C60016AF33 /* RegularExpression */ = {
+			isa = PBXGroup;
+			children = (
+				2B787EEB2159689C0016AF33 /* KDRegularExpressionViewController.h */,
+				2B787EEC2159689C0016AF33 /* KDRegularExpressionViewController.m */,
+			);
+			path = RegularExpression;
 			sourceTree = "<group>";
 		};
 		2BF9EEFA1FE2E65500BC1706 /* CoreAnimationAdvancedTechniques */ = {
@@ -350,6 +363,7 @@
 			files = (
 				2B5286061E8CED3B00FD0F7D /* KDTableViewController.m in Sources */,
 				2BF9EF0D1FEEC15D00BC1706 /* EasingViewController.m in Sources */,
+				2B787EED2159689C0016AF33 /* KDRegularExpressionViewController.m in Sources */,
 				2BF9EF121FF011FA00BC1706 /* TimerBaseAnimationViewController.m in Sources */,
 				2B5285D61E8CEC2000FD0F7D /* ViewController.m in Sources */,
 				2BF9EF031FE5C5A400BC1706 /* ImplicitAnimationViewController.m in Sources */,

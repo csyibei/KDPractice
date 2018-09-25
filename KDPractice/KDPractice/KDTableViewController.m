@@ -12,6 +12,7 @@
 #import "ImplicitAnimationViewController.h"
 #import "LayerTimeViewController.h"
 #import "EasingViewController.h"
+#import "KDRegularExpressionViewController.h"
 
 @interface KDTableViewController ()
 @property (nonatomic,strong) NSArray *dataArr;
@@ -35,7 +36,7 @@
     NSLog(@"--------------------------end");
     
     
-    self.dataArr = @[@"method Swizzing",@"CABaseAnimation",@"ImplicitAnimation",@"LayerTime",@"Easing"];
+    self.dataArr = @[@"method Swizzing",@"CABaseAnimation",@"ImplicitAnimation",@"LayerTime",@"Easing",@"RegularExpression"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -83,6 +84,9 @@
         [self.navigationController pushViewController:ctl animated:YES];
     }else if (indexPath.row == 4){
         EasingViewController *ctl = [[EasingViewController alloc] init];
+        [self.navigationController pushViewController:ctl animated:YES];
+    }else if (indexPath.row == 5){
+        KDRegularExpressionViewController *ctl = [[KDRegularExpressionViewController alloc] init];
         [self.navigationController pushViewController:ctl animated:YES];
     }
 }
